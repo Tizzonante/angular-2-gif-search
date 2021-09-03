@@ -1,0 +1,39 @@
+<!-- -----------------------------------opcion 1--------------------------------- -->
+<!-- Aqui hacemos uso de Local References in Angular con el nombre #textoABuscar -->
+
+<h5>Buscar:</h5>
+<input
+  type="text"
+  name="search"
+  placeholder="escribe algo para buscar"
+  class="form-control"
+  (keyup.enter)="buscar()"
+  #textoABuscar
+/>
+<!-- (keyup.enter)="search(textoABuscar.value)" -->
+<!-- (keyup)="search2($event)" -->
+<!-- (keyup.enter)="search3(textoABuscar)" -->
+
+<!-- -----------------------------------opcion 2--------------------------------- -->
+<!-- <form (ngSubmit)="search()">
+  <input
+    type="text"
+    name="search"
+    placeholder="escribe algo para buscar"
+    class="form-control"
+    [(ngModel)]="textSeach"
+  />
+  <button type="submit">search</button>
+</form>
+<h5>searching {{ textSeach }}</h5> -->
+
+<!-- ---------------------------------------Opcion 3------------------------ -->
+<!-- <h5>Buscar:</h5>
+<input
+  type="text"
+  name="search"
+  placeholder="escribe algo para buscar"
+  class="form-control"
+  [(ngModel)]="textSeach"
+/>
+<h5>searching {{ textSeach }}</h5> -->
