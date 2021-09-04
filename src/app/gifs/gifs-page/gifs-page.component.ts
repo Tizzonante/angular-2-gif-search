@@ -1,16 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { GifService } from '../services/gif.service';
 
 @Component({
   selector: 'app-gifs-page',
   templateUrl: './gifs-page.component.html',
-  styles: [
-  ]
+  styles: [],
 })
-export class GifsPageComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+export class GifsPageComponent {
+  public resultsEmpty(): boolean {
+    const length = this.gifService.currentResults.length;
+    return length === 0;
   }
-
+  constructor(private gifService: GifService) {}
 }

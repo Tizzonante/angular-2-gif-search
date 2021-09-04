@@ -7,8 +7,15 @@
 <!-- Fin de busqueda -->
 <Hr />
 
-<div class="row p-2 bg-warning m-2">
-  <div class="col text-light">
-    <app-results></app-results>
+<div class="row p-2 m-2" style="background-color: #b6d7f4">
+  <div class="col text-dark">
+    <div *ngIf="!resultsEmpty(); else instruciones">
+      <app-results></app-results>
+    </div>
   </div>
 </div>
+
+<ng-template #instruciones>
+  <h5>Aún no has buscado nada</h5>
+  <small>Escribe algo y presiona enter para buscar gifs divertidos</small>
+</ng-template>

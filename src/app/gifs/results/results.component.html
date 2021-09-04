@@ -1,5 +1,20 @@
-<div>
+<!-- <div>
   <div class="m-1" *ngFor="let urlImg of results">
     <img src="{{ urlImg }}" alt="no cargo" />
+  </div>
+</div> -->
+
+<div class="row">
+  <div class="col-md-4 col-sm-6" *ngFor="let gif of results">
+    <div class="card" style="background-color: aliceblue">
+      <img
+        [src]="gif.images.fixed_height_downsampled.url"
+        alt="no cargo"
+        class="card-image-top"
+      />
+      <div class="card-body">
+        <p class="card-text">{{ gif.title }}</p>
+      </div>
+    </div>
   </div>
 </div>

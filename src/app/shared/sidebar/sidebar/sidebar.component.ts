@@ -10,5 +10,9 @@ export class SidebarComponent {
     return this.gifService.historial;
   }
 
+  public ReSearch(textoToFind: string) {
+    this.gifService.searchGifs(textoToFind);
+  }
+
   constructor(private gifService: GifService) {}
 }
