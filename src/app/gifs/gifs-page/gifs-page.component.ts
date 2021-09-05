@@ -7,6 +7,9 @@ import { GifService } from '../services/gif.service';
   styles: [],
 })
 export class GifsPageComponent {
+  public get primeraVez() {
+    return this.gifService.esPrimeraVez;
+  }
   public resultsEmpty(): boolean {
     const length = this.gifService.currentResults.length;
     return length === 0;

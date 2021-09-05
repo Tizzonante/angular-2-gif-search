@@ -11,6 +11,7 @@ export class SidebarComponent {
   }
 
   public ReSearch(textoToFind: string) {
+    //let currentbotton=document.getElementById()
     this.gifService.searchGifs(textoToFind);
   }
 

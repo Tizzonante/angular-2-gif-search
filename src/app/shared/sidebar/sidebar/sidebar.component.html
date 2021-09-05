@@ -11,7 +11,11 @@
     <a
       (click)="ReSearch(textBuscado)"
       href="#"
-      class="list-group-item list-group-item-action m-1"
+      class="
+        list-group-item list-group-item-action
+        m-1
+        animate__animated animate__fadeIn animate__slow
+      "
       *ngFor="let textBuscado of historical"
       >{{ textBuscado | titlecase }}</a
     >

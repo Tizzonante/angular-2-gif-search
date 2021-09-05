@@ -16,6 +16,18 @@
 </div>
 
 <ng-template #instruciones>
-  <h5>Aún no has buscado nada</h5>
-  <small>Escribe algo y presiona enter para buscar gifs divertidos</small>
+  <div *ngIf="primeraVez; else noHayResultados">
+    <h5>Aún no has buscado nada</h5>
+    <small
+      >Escribe algo o selecciona una opción de tu historial para encontrar gifs
+      divertidos</small
+    >
+  </div>
+</ng-template>
+
+<ng-template #noHayResultados>
+  <div>
+    <h5>No hay resultados</h5>
+    <small>Por favor, intenta buscar con otras palabras</small>
+  </div>
 </ng-template>
